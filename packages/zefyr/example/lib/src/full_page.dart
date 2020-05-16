@@ -30,11 +30,7 @@ class FullPageEditorScreen extends StatefulWidget {
   _FullPageEditorScreenState createState() => _FullPageEditorScreenState();
 }
 
-final doc =
-    r'[{"insert":"Zefyr"},{"insert":"Soft and gentle rich text editing for Flutter applications.","attributes":{"i":true}},{"insert":""},{"insert":""},{"insert":"Photo by Hiroyuki Takeda.","attributes":{"i":true}},{"insert":"Zefyr is currently in "},{"insert":"early preview","attributes":{"b":true}},{"insert":". If you have a feature request or found a bug, please file it at the "},{"insert":"issue tracker","attributes":{"a":"https://github.com/memspace/zefyr/issues"}},{"insert":'
-    r'".Documentation"},{"insert":"Quick Start","attributes":{"a":"https://github.com/memspace/zefyr/blob/master/doc/quick_start.md"}},{"insert":"","attributes":{"block":"ul"}},{"insert":"Data Format and Document Model","attributes":{"a":"https://github.com/memspace/zefyr/blob/master/doc/data_and_document.md"}},{"insert":"","attributes":{"block":"ul"}},{"insert":"Style Attributes","attributes":{"a":"https://github.com/memspace/zefyr/blob/master/doc/attr'
-    r'ibutes.md"}},{"insert":"","attributes":{"block":"ul"}},{"insert":"Heuristic Rules","attributes":{"a":"https://github.com/memspace/zefyr/blob/master/doc/heuristics.md"}},{"insert":"","attributes":{"block":"ul"}},{"insert":"FAQ","attributes":{"a":"https://github.com/memspace/zefyr/blob/master/doc/faq.md"}},{"insert":"","attributes":{"block":"ul"}},{"insert":"Clean and modern look"},{"insert":"Zefyr’s rich text editor is built with simplicity and fle'
-    r'xibility in mind. It provides clean interface for distraction-free editing. Think Medium.com-like experience.Markdown inspired semantics"},{"insert":"Ever needed to have a heading line inside of a quote block, like this:I’m a Markdown heading"},{"insert":"And I’m a regular paragraph"},{"insert":"\n\n\n"}]';
+final doc = r'[{"insert":"\n"}]';
 
 Delta getDelta() {
   return Delta.fromJson(json.decode(doc) as List);
