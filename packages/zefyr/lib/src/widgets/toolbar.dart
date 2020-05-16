@@ -78,7 +78,7 @@ class ZefyrToolbarScaffold extends StatelessWidget {
     final theme = ZefyrTheme.of(context).toolbarTheme;
     final toolbar = ZefyrToolbar.of(context);
     final constraints =
-        BoxConstraints.tightFor(height: ZefyrToolbar.kToolbarHeight);
+    BoxConstraints.tightFor(height: ZefyrToolbar.kToolbarHeight);
     final children = <Widget>[
       Expanded(child: body),
     ];
@@ -114,7 +114,7 @@ class ZefyrToolbar extends StatefulWidget implements PreferredSizeWidget {
 
   static ZefyrToolbarState of(BuildContext context) {
     final _ZefyrToolbarScope scope =
-        context.dependOnInheritedWidgetOfExactType<_ZefyrToolbarScope>();
+    context.dependOnInheritedWidgetOfExactType<_ZefyrToolbarScope>();
     return scope?.toolbar;
   }
 
@@ -238,7 +238,7 @@ class ZefyrToolbarState extends State<ZefyrToolbar>
     }
 
     final constraints =
-        BoxConstraints.tightFor(height: ZefyrToolbar.kToolbarHeight);
+    BoxConstraints.tightFor(height: ZefyrToolbar.kToolbarHeight);
     return _ZefyrToolbarScope(
       toolbar: this,
       child: Container(
@@ -253,13 +253,14 @@ class ZefyrToolbarState extends State<ZefyrToolbar>
       buildButton(context, ZefyrToolbarAction.bold),
       buildButton(context, ZefyrToolbarAction.italic),
       LinkButton(),
-      HeadingButton(),
+      //HeadingButton(),
       buildButton(context, ZefyrToolbarAction.bulletList),
       buildButton(context, ZefyrToolbarAction.numberList),
-      buildButton(context, ZefyrToolbarAction.quote),
-      buildButton(context, ZefyrToolbarAction.code),
-      buildButton(context, ZefyrToolbarAction.horizontalRule),
-      if (editor.imageDelegate != null) ImageButton(),
+      //buildButton(context, ZefyrToolbarAction.quote),
+      //buildButton(context, ZefyrToolbarAction.code),
+      //buildButton(context, ZefyrToolbarAction.horizontalRule),
+      if (editor.imageDelegate != null)
+        ImageButton(),
     ];
     return buttons;
   }
@@ -396,3 +397,4 @@ class _DefaultZefyrToolbarDelegate implements ZefyrToolbarDelegate {
     }
   }
 }
+
